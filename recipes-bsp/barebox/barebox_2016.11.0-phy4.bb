@@ -18,6 +18,7 @@ PR = "${INC_PR}.0"
 SRCREV = "5e936732882e16603ddb73bbd8265080967a14ba"
 SRC_URI += "\
     ${@oe.utils.conditional('DEBUG_BUILD','1','file://debugging.cfg','',d)} \
+    file://fix_multiple_definition_of_yylloc.patch \
 "
 
 python do_env_append() {
