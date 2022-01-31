@@ -16,6 +16,7 @@ SRC_URI_append = " \
   ${@bb.utils.contains('DEBUG_BUILD', '1', 'file://debugging.cfg', '', d)} \
 "
 
+
 INC_PR = "r0"
 
 DEPENDS += "lzop-native lz4-native"

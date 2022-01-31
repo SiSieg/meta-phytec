@@ -6,7 +6,9 @@ inherit buildinfo
 include linux-common.inc
 
 GIT_URL = "git://git.phytec.de/${PN}"
-SRC_URI = "${GIT_URL};branch=${BRANCH}"
+SRC_URI = "${GIT_URL};branch=${BRANCH} \
+          file://scripts-dtc-remove-redundant-YYLOC.patch \
+          "
 
 PR = "${INC_PR}.0"
 
